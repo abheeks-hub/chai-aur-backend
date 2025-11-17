@@ -4,7 +4,8 @@
   "description": "this is a repo for a big backend project\r [models](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)",
   "main": "index.js",
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prettier": "^3.6.2"
   },
   "scripts": {
     "dev": "nodemon src/index.js"
