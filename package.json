@@ -1,0 +1,24 @@
+{
+  "name": "chai-aur-backend-big-project",
+  "version": "1.0.0",
+  "description": "this is a repo for a big backend project\r [models](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abheeks-hub/chai-aur-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/abheeks-hub/chai-aur-backend/issues"
+  },
+  "homepage": "https://github.com/abheeks-hub/chai-aur-backend#readme"
+}
