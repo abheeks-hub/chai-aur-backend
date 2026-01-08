@@ -1,17 +1,16 @@
 // require('dotenv').config({path: './env'})
 
-import dotenv from 'dotenv';
-dotenv.config({ path: "./.env" }); 
+import dotenv from "dotenv";
+dotenv.config({ path: "./.env" });
 // import mongoose from "mongoose";
-// import { DB_NAME } from "./constants.js";
-import connectDB from "./db/index.js";
-import {app} from "./app.js"
-// SECOND APPROACH
 
-app.on("Error", (error)=>{
+import connectDB from "./db/index.js";
+import { app } from "./app.js";
+ // SECOND APPROACH
+
+app.on("Error", (error) => {
   console.log("Error is: ", error);
-  
-})
+});
 connectDB()
   .then(() => {
     app.listen(process.env.PORT || 8000, () => {
@@ -19,8 +18,11 @@ connectDB()
     });
   })
   .catch((error) => {
-    console.log("Mongo DB connection failed!!!", error);
+    console.log("MongoDB connection error", error);
+    // process.exit(1);
   });
+
+
 
 /*
 import express from "express";
@@ -30,7 +32,7 @@ const app = express();
 
 (async () => {
   try {
-    mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`);
+    await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`);
     console.log("MongoDB connected ✅");
     console.log(process.env.MONGODB_URL);
     app.on("Error", (error) => {

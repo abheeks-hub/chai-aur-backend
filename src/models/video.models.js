@@ -37,8 +37,14 @@ const videoSchema = new Schema(
   { timestamps: true }
 );
 
-videoSchema.plugin(aggregatePaginate) 
-// Plugin in mongoose is a resuable peice of logic (like an add on or extension) that can be 
+videoSchema.plugin(aggregatePaginate);
+// videoSchema.pre("save", async (next) => {
+//   /*
+//     execute stuff, for eg: password hashing
+//   */
+//   next();
+// });
+// Plugin in mongoose is a resuable peice of logic (like an add on or extension) that can be
 // attached in Schemas to add extra functionalities, middlewares, helpers, extra methods
 
 export const Video = mongoose.model("Video", videoSchema);
