@@ -9,7 +9,7 @@
 // requestHandler -> this is just a demo function name which doesn't exists now
 
 const asyncHandler = (requestHandler) => {
-  (req, res, next) => {
+  return (req, res, next) => {
     Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err));
   };
 };

@@ -37,7 +37,7 @@ const videoSchema = new Schema(
   { timestamps: true }
 );
 
-videoSchema.plugin(aggregatePaginate);
+videoSchema.plugin(aggregatePaginate); 
 // videoSchema.pre("save", async (next) => {
 //   /*
 //     execute stuff, for eg: password hashing
@@ -48,3 +48,4 @@ videoSchema.plugin(aggregatePaginate);
 // attached in Schemas to add extra functionalities, middlewares, helpers, extra methods
 
 export const Video = mongoose.model("Video", videoSchema);
+
